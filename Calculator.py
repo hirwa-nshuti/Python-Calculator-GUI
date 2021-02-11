@@ -8,8 +8,6 @@ from tkinter import *
 
 """Defining the Widget function that is going to be used to create the interface
 """
-
-#creating the root object of tk
 def create_widgets():
     calcDisplay=Entry(root, bd=23, justify="right", font=("Helvetica", 25, "bold"), textvariable=data_val, bg="white smoke")
     calcDisplay.grid(row=0, column=0, columnspan=4)
