@@ -105,9 +105,8 @@ def clearEntry():
 root = tk.Tk()
 
 # Title and size of the interface
-root.title('Python Calculator')
+root.title('Felix Calculator')
 root.resizable(True,False)
-root.geometry("8*8")
 root.configure(background='gray79')
 
 # Creating tkinter variable
