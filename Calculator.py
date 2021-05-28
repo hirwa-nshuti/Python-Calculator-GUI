@@ -6,13 +6,14 @@
 import tkinter as tk
 from tkinter import *
 
-"""Defining the Widget function that is going to be used to create the interface
+"""
+Defining the Widget function that is going to be used to create the interface
 """
 
 
 def create_widgets():
     calculator_display = Entry(root, bd=23, justify="right", font=("Helvetica", 25, "bold"), textvariable=data_val,
-                               bg="gray12")
+                               bg="white")
     calculator_display.grid(row=0, column=0, columnspan=4)
     all_clear = Button(root, text="AC", bd=5, font=("Helvetica", 25, "bold"), width=4, height=2, command=allclearEntry)
     all_clear.grid(row=1, column=0, padx=3, pady=3)
@@ -21,7 +22,7 @@ def create_widgets():
     clear.grid(row=1, column=1, padx=3, pady=3)
 
     percentage = Button(root, text='%', bd=3, font=("Helvetica", 25, "bold"), width=4, height=2,
-                  command=lambda: click_button('%'))
+                        command=lambda: click_button('%'))
     percentage.grid(row=1, column=2, padx=3, pady=3)
 
     d_button = Button(root, text='/', bd=3, font=("Helvetica", 25, "bold"), width=4, height=2,
@@ -113,7 +114,7 @@ def calculateResult():
 # Clearing all function
 def allclearEntry():
     global c_val
-    # reseting the c_val value by making an empty string to be displayed on the Widget
+    # resetting the c_val value by making an empty string to be displayed on the Widget
     c_val = ""
     data_val.set(c_val)
 
@@ -142,5 +143,5 @@ data_val = StringVar()
 c_val = ""
 create_widgets()
 
-# Making the operation not endable
+# Making the operation not enabled
 root.mainloop()
